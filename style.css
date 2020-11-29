@@ -1,0 +1,12 @@
+.random-letter{
+    display: inline;
+    font-size:30px;
+    font-family: sans-serif;
+    align-items: center;
+    justify-content: left;
+    margin:15%;
+}
+
+#start, #next, #reset {
+  align-items: center;
+}

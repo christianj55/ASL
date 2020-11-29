@@ -1,0 +1,30 @@
+<html lang=”en”>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Name of the app -->
+		<title>ASL Tester2</title>
+
+		<!-- Link to main style sheet -->
+		<link rel="stylesheet" href="style.css"> 
+	</head>
+
+	<body onload="cdreset()">
+
+		<span id="timespan"></span> <br> <br>
+  
+		<!-- Letter -->
+		<div class="random-letter"></div> <br> <br>
+		
+		<!-- Buttons -->
+		<input id="Start" type="button" value="Start" onclick="startAndGen()">
+		<input id="Next" type="button" value="Next" onclick="nextAndGen()">
+		<input id="Reset" type="button" value="Reset" onclick="cdreset()">
+
+		<!-- Letter Generator Script -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"> </script>
+
+	</body>
+</html>
