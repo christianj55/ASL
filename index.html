@@ -10,15 +10,18 @@
 
 	<body onload="cdreset()">
 
-		<span id="timespan"></span> <br> <br>
+		<span id="timespan"></span> <br> <br> <br>
   
 		<!-- Letter -->
+		
 		<div class="random-letter"></div> <br> <br>
 		
 		<!-- Buttons -->
-		<input id="Start" type="button" value="Start" onclick="startAndGen()">
-		<input id="Next" type="button" value="Next" onclick="nextAndGen()">
-		<input id="Reset" type="button" value="Reset" onclick="cdreset()">
+		<div class="buttons">
+			<input id="Start" type="button" value="Start" onclick="startAndGen()">
+			<input id="Next" type="button" value="Next" onclick="nextAndGen()">
+			<input id="Reset" type="button" value="Reset" onclick="cdreset()">
+		</div>
 
 		<!-- Letter Generator Script -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
