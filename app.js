@@ -13,7 +13,7 @@ function randLetter() {
   for( var i=0; i < 5; i++ ) {
     setTimeout(function () {
       $('.random-letter').text(stringGen(1));
-    }, 1000);
+    });
   }
 }
 
@@ -52,8 +52,13 @@ var CCOUNT = 5;
         cddisplay();
         clearTimeout(t);
         document.getElementById("Start").disabled = false;
+
+        $('.random-letter').text("");
+
     };
 
+
+//START & NEXT BUTTONS 
     function startAndGen(){
       randLetter();
       countdown();
