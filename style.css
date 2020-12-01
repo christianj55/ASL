@@ -1,13 +1,52 @@
 .random-letter{
-    display: inline;
-    font-size:30px;
+    text-align: left;
+    font-size:500px;
     font-family: sans-serif;
-    align-items: center;
+    font-weight: bold;
+    align-items: left;
+    
+    padding-left: 15%;
+    padding-right: 15%;
     justify-content: left;
-    margin:15%;
+}
+
+
+#timespan {
+  display: inline-flex;
+  font-family: sans-serif;
+  margin-top: 1%;
+  font-size: 30px;
+  border-radius: 50px;
+  border: none;
+  padding: 20px 30px;
+  background-color: black;
+  color: white; 
+}
+
+.buttons{
+  margin-left: 7.25%;
+  position: relative;
+}
+
+#start:hover, #next:hover, #reset:hover {
+  background-color:lightskyblue;
+  color: white;
+  cursor: pointer;
 }
 
 #start, #next, #reset {
-  align-items: center;
-  margin-left:15%;
+  width: 200px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  padding: 15px 20px;
+  transition-duration: 0.4s;
+  background-color: black;
+  color: white;
+}
+
+#start:disabled, #next:disabled, #reset:disabled {
+  background-color:lightgrey;
+  cursor: not-allowed;
+  pointer-events: all !important;
 }
