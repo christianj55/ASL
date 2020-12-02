@@ -1,6 +1,5 @@
 <html lang=”en”>
-	<head>
-
+	<head>		
 		<!-- Name of the app -->
 		<title>ASL Tester</title>
 
@@ -8,21 +7,40 @@
 		<link rel="stylesheet" href="style.css"> 
 	</head>
 
-	<body onload="cdreset()">
+	<body onload="loadFunction()">
+		<ul class="flex-container">
 
-		<span id="timespan"></span> <br> <br> <br>
-  
-		<!-- Letter -->
+			<li class="leftSide">
+				<span id="timespan"></span> <br> <br> <br>
 		
-		<div class="random-letter"></div> <br> <br>
-		
-		<!-- Buttons -->
-		<div class="buttons">
-			<input id="Start" type="button" value="Start" onclick="startAndGen()">
-			<input id="Next" type="button" value="Next" onclick="nextAndGen()">
-			<input id="Reset" type="button" value="Reset" onclick="cdreset()">
+				<!-- Letter -->
+				
+				<div class="random-letter"></div> <br> <br>
+				
+				<!-- Buttons -->
+				<div class="buttons">
+					<input id="Start" type="button" value="Start" onclick="startAndGen()">&nbsp;&nbsp;&nbsp;
+					<input id="Next" type="button" value="Next" onclick="nextAndGen()">&nbsp;&nbsp;&nbsp;
+					<input id="Reset" type="button" value="Reset" onclick="cdreset()">
+				</div>
+			</li>
+			
+			<li id="camera">
+
+				<!-- Camera sensor -->
+				<canvas id="camera--sensor"></canvas>
+				
+				<!-- Camera view -->
+				<video id="camera--view" autoplay playsinline></video>
+				
+				<!-- Camera output -->
+				<img src="//:0" alt="" id="camera--output">
+
+                <!-- Camera trigger
+				<button id="camera--trigger">Take a picture</button> -->
+			</li>
+
 		</div>
-
 		<!-- Letter Generator Script -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
 		<script src="app.js"></script>
