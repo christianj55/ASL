@@ -1,13 +1,28 @@
-.random-letter{
+.flex-container {
+  display: flex;
+  flex-flow: row;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.leftSide {
+  justify-content: center;
+  padding-right: 300px;
+  border-style: solid;
+}
+
+.random-letter {
     text-align: left;
     font-size:500px;
     font-family: sans-serif;
     font-weight: bold;
     align-items: left;
-    
+    margin-left: 12%;
     padding-left: 15%;
     padding-right: 15%;
-    justify-content: left;
+    justify-content: center;
+    border-style: solid;
 }
 
 
@@ -24,8 +39,14 @@
 }
 
 .buttons{
+  display: flex;
+  flex-flow: row;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
   margin-left: 7.25%;
   position: relative;
+  border-style: solid;
 }
 
 #start:hover, #next:hover, #reset:hover {
@@ -49,4 +70,50 @@
   background-color:lightgrey;
   cursor: not-allowed;
   pointer-events: all !important;
+}
+
+#camera {
+  justify-content: right;
+  padding-left: 8px;
+  /* border-style: solid; */
+}
+
+#camera--view, #camera--sensor, #camera--output{
+  position: fixed;
+  display: flex;
+  justify-content: right;
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+}
+
+#camera--view, #camera--sensor, #camera--output{
+  transform: scaleX(-1);
+  filter: FlipH;
+}
+
+#camera--trigger{
+  width: 200px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  padding: 15px 20px;
+  text-align: center;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+  position: fixed;
+  bottom: 30px;
+  left: calc(50% - 100px);
+}
+
+.taken{
+  height: 100px!important;
+  width: 100px!important;
+  transition: all 0.5s ease-in;
+  border: solid 3px white;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+  top: 20px;
+  right: 20px;
+  z-index: 2;
 }
